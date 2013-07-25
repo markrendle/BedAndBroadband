@@ -7,5 +7,6 @@
     {
         Hotel Get(int id);
         IEnumerable<Hotel> GetRecentlyRated();
+        void AddRating(Rating rating);
     }
 }

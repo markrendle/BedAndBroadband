@@ -90,6 +90,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="App\Controllers\RateHotelController.ts" />
+    <Content Include="App\Controllers\RateHotelController.js">
+      <DependentUpon>RateHotelController.ts</DependentUpon>
+    </Content>
+    <Content Include="Content\font\fontawesome-webfont.svg" />
+    <Content Include="Content\font\fontawesome-webfont.woff" />
+    <Content Include="Content\font\fontawesome-webfont.ttf" />
+    <Content Include="Content\font\fontawesome-webfont.eot" />
+    <Content Include="Content\font\FontAwesome.otf" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <TypeScriptCompile Include="App\app.ts" />
     <Content Include="App\app.js">
@@ -105,8 +114,16 @@
       <DependentUpon>HomeController.ts</DependentUpon>
     </Content>
     <TypeScriptCompile Include="App\Services\HotelService.ts" />
+    <TypeScriptCompile Include="App\Controllers\HotelController.ts" />
+    <Content Include="App\Controllers\HotelController.js">
+      <DependentUpon>HotelController.ts</DependentUpon>
+    </Content>
     <Content Include="App\Services\HotelService.js">
       <DependentUpon>HotelService.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="App\Utils\Links.ts" />
+    <Content Include="App\Utils\Links.js">
+      <DependentUpon>Links.ts</DependentUpon>
     </Content>
     <Content Include="App\_project.js">
       <DependentUpon>_project.ts</DependentUpon>
@@ -115,11 +132,17 @@
     <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome-ie7.css" />
+    <Content Include="Content\font-awesome-ie7.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
+    <Content Include="Content\Site.css" />
     <Content Include="Html\base.html" />
     <Content Include="Html\home.html" />
     <Content Include="Html\hotel.html" />
+    <Content Include="Html\ratedialog.html" />
     <Content Include="index.html" />
     <Content Include="Scripts\angular-cookies.js" />
     <Content Include="Scripts\angular-cookies.min.js" />

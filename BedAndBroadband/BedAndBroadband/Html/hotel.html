@@ -1,5 +1,41 @@
 ﻿<div class="container-fluid">
     <div class="row-fluid">
-        <h1>{{hotel.name}}</h1>
+        <div class="span3"></div>
+        <div class="span6">
+            <h1>{{hotel.name}}</h1>
+            <h3><i class="icon-sitemap" ng-show="hotel.wired"></i> <i class="icon-signal" ng-show="hotel.wireless"></i></h3>
+            <p>{{hotel.address}}
+                <br/>
+                {{hotel.city}}
+                <br/>
+                {{hotel.postcode}}
+                <br/>
+                {{hotel.country}}
+            </p>
+            <button class="btn btn-large btn-primary" ng-click="addRating()">Add your rating.</button>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span3"></div>
+        <div class="span6">
+            <table ng-show="hotel.ratings.length">
+                <thead>
+                    <tr>
+                        <th>Quality</th>
+                        <th>Download</th>
+                        <th>Upload</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="rating in hotel.ratings">
+                        <td>{{rating.quality}}</td>
+                        <td>{{rating.downloadMbps}}</td>
+                        <td>{{rating.uploadMbps}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div ng-hide="hotel.ratings.length">No ratings for this hotel yet.</div>
+        </div>
     </div>
 </div>
+<div ui-view></div>

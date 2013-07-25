@@ -13,4 +13,14 @@ app.config(($stateProvider: ng.ui.IStateProvider) => {
         templateUrl: "html/home.html",
         controller: HomeController
     });
+    $stateProvider.state("base.hotel", {
+        url: "/hotel/:id",
+        templateUrl: "html/hotel.html",
+        controller: HotelController
+    });
+    $stateProvider.state("base.hotel.rate", {
+        url: "/rate",
+        controller: RateHotelController
+    });
+
 });

@@ -45,6 +45,7 @@
     <Compile Include="Hotels.cs" />
     <Compile Include="IHotels.cs" />
     <Compile Include="Models\Hotel.cs" />
+    <Compile Include="Models\Rating.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

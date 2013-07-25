@@ -1,5 +1,7 @@
 ﻿namespace BedAndBroadband.Data.Models
 {
+    using System.Collections.Generic;
+
     public class Hotel
     {
         public int Id { get; set; }
@@ -11,5 +13,7 @@
         public bool Wired { get; set; }
         public bool Wireless { get; set; }
         public int Rating { get; set; }
+
+        public List<Rating> Ratings { get; set; }
     }
 }

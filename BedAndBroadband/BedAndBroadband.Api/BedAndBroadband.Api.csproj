@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddRating.cs" />
     <Compile Include="GetHotel.cs" />
     <Compile Include="GetRecentlyRatedHotels.cs" />
     <Compile Include="CollectionDto.cs" />

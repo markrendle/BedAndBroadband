@@ -1,9 +1,9 @@
 ﻿<div class="container-fluid">
     <div class="row-fluid">
         <h1>Recently rated</h1>
-        <ul class="nav-list">
+        <ul class="hotel-list">
             <li ng-repeat="hotel in hotels">
-                <a ng-href="/hotel/{{hotel.id}}">{{hotel.name}}</a>
+                <button class="btn btn-link" ng-click="goToHotel(hotel)">{{hotel.name}}</button>
                 <rating value="hotel.rating" max="10" readonly="true"></rating>
             </li>
         </ul>

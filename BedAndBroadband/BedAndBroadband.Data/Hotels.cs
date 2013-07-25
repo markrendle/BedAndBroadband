@@ -1,5 +1,6 @@
 ﻿namespace BedAndBroadband.Data
 {
+    using System;
     using System.Collections;
     using System.Collections.Generic;
     using System.Data;
@@ -12,12 +13,18 @@
 
         public Hotel Get(int id)
         {
-            return _db.Hotels.Get(id);
+            return _db.Hotels.WithRatings().Get(id);
         }
 
         public IEnumerable<Hotel> GetRecentlyRated()
         {
             return _db.HotelByRating.All().OrderByLastRatingDateDescending().Take(10);
+        }
+
+        public void AddRating(Rating rating)
+        {
+            rating.Date = DateTimeOffset.UtcNow;
+            _db.Ratings.Insert(rating);
         }
     }
 }

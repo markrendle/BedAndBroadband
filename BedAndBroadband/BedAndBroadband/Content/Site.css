@@ -1,0 +1,8 @@
+﻿body {
+    padding-top: 80px;
+}
+
+ul.hotel-list {
+    list-style: none;
+    font-size: 1.2em;
+}

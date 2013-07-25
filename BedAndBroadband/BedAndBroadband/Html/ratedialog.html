@@ -1,0 +1,30 @@
+﻿<div class="modal-header">
+    <button type="button" class="close" aria-hidden="true" ng-click="cancel()">&times;</button>
+    <h3>Rate {{hotel.name}}</h3>
+</div>
+<div class="modal-body">
+    <form name="form" class="form-horizontal" ng-submit="ok()">
+        <div class="control-group">
+            <label>Quality</label>
+            <rating value="rating.quality" max="10"></rating>
+        </div>
+        <div class="control-group">
+            <label for="downloadMbps">Download</label>
+            <div class="input-append">
+                <input type="number" name="downloadMbps" ng-model="rating.downloadMbps"/>
+                <span class="add-on">Mbps</span>
+            </div>
+        </div>
+        <div class="control-group">
+            <label for="uploadMbps">Upload</label>
+            <div class="input-append">
+                <input type="number" name="uploadMbps" ng-model="rating.uploadMbps"/>
+                <span class="add-on">Mbps</span>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()" ng-disabled="form.$invalid">OK</button>
+    <button class="btn" aria-hidden="true" ng-click="cancel()">Cancel</button>
+</div>
