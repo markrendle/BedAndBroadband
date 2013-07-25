@@ -1,0 +1,11 @@
+﻿<div class="container-fluid">
+    <div class="row-fluid">
+        <h1>Recently rated</h1>
+        <ul class="nav-list">
+            <li ng-repeat="hotel in hotels">
+                <a ng-href="/hotel/{{hotel.id}}">{{hotel.name}}</a>
+                <rating value="hotel.rating" max="10" readonly="true"></rating>
+            </li>
+        </ul>
+    </div>
+</div>
